@@ -61,7 +61,9 @@ def run_instagram(status: dict, hist: dict, target, backfill: int) -> None:
     st = {"checked": now_iso()}
     try:
         res = ig.refresh_token()
-        if res.get("expires_in"):
+        if ig.mode == "facebook":
+            st["token_expires"] = None  # Seiten-Token läuft nicht ab
+        elif res.get("expires_in"):
             exp = datetime.now(timezone.utc) + timedelta(seconds=int(res["expires_in"]))
             st["token_expires"] = exp.date().isoformat()
         if ig.token != token and os.environ.get("RUNNER_TEMP"):
@@ -77,7 +79,8 @@ def run_instagram(status: dict, hist: dict, target, backfill: int) -> None:
             vals = ig.week(mon, include_followers=(mon == target))
             merge_week(hist, week_id(mon), "ig", vals, "api")
         st["ok"] = True
-        st["message"] = f"@{st.get('account')} · {len(weeks)} Woche(n) abgerufen"
+        st["mode"] = ig.mode
+        st["message"] = f"@{st.get('account')} · {len(weeks)} Woche(n) abgerufen ({'Facebook' if ig.mode == 'facebook' else 'Instagram'}-Login)"
     except InstagramError as e:
         st["ok"] = False
         st["message"] = f"Abruf fehlgeschlagen: {e}"

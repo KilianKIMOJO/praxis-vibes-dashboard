@@ -1,7 +1,11 @@
 """Instagram-Kennzahlen über die offizielle Instagram Graph API (Instagram Login).
 
-Benötigt:  IG_ACCESS_TOKEN  (langlebiger Token, 60 Tage gültig)
+Benötigt:  IG_ACCESS_TOKEN  (einer von zwei Token-Arten, wird automatisch erkannt)
+           - Instagram-Login: Token beginnt mit "IG", gilt 60 Tage, wird bei jedem Lauf verlängert
+           - Facebook-Login: Seiten-Token (beginnt mit "EAA") der mit @praxis.vibes verknüpften
+             Facebook-Seite; aus einem langlebigen Nutzer-Token abgeleitet läuft er nie ab
 Optional:  IG_API_VERSION   (Standard v26.0)
+           IG_USERNAME      (Standard praxis.vibes, wählt bei mehreren Seiten das richtige Konto)
 
 Je Woche (Mo 00:00 bis Mo 00:00, Europe/Berlin) werden abgefragt:
 reach, views, profile_views, profile_links_taps, follows_and_unfollows.
@@ -21,6 +25,8 @@ from zoneinfo import ZoneInfo
 
 BERLIN = ZoneInfo("Europe/Berlin")
 HOST = "https://graph.instagram.com"
+FB_HOST = "https://graph.facebook.com"
+IG_FIELDS = "id,username,followers_count,media_count"
 
 
 class InstagramError(RuntimeError):
@@ -48,7 +54,10 @@ def _ts(d: date) -> int:
 class Instagram:
     def __init__(self, token: str, version: str | None = None, raw_dir: Path | None = None):
         self.token = token
-        self.base = f"{HOST}/{version or os.environ.get('IG_API_VERSION') or 'v26.0'}"
+        ver = version or os.environ.get("IG_API_VERSION") or "v26.0"
+        mode = (os.environ.get("IG_API_MODE") or "").lower()
+        self.mode = mode if mode in ("instagram", "facebook") else ("instagram" if token.startswith("IG") else "facebook")
+        self.base = f"{HOST if self.mode == 'instagram' else FB_HOST}/{ver}"
         self.raw_dir = raw_dir
         self.user_id = None
         self.warnings: list[str] = []
@@ -59,7 +68,10 @@ class Instagram:
             (self.raw_dir / f"ig_{name}.json").write_text(json.dumps(obj, indent=2), encoding="utf-8")
 
     def refresh_token(self) -> dict:
-        """Verlängert den Token um 60 Tage. Gibt {access_token, expires_in} zurück."""
+        """Verlängert den Token um 60 Tage. Gibt {access_token, expires_in} zurück.
+        Seiten-Token (Facebook-Login) laufen nicht ab und werden nicht verlängert."""
+        if self.mode == "facebook":
+            return {}
         res = _get(f"{HOST}/refresh_access_token",
                    {"grant_type": "ig_refresh_token", "access_token": self.token})
         if res.get("access_token"):
@@ -67,11 +79,29 @@ class Instagram:
         return res
 
     def profile(self) -> dict:
-        res = _get(f"{self.base}/me", {"fields": "user_id,username,followers_count,media_count",
+        if self.mode == "instagram":
+            res = _get(f"{self.base}/me", {"fields": "user_id,username,followers_count,media_count",
+                                           "access_token": self.token})
+            self._raw("profile", res)
+            self.user_id = res.get("user_id") or res.get("id")
+            return res
+        # Facebook-Login: mit Seiten-Token ist /me die Seite, mit Nutzer-Token der Nutzer
+        want = (os.environ.get("IG_USERNAME") or "praxis.vibes").lower()
+        res = _get(f"{self.base}/me", {"fields": f"name,instagram_business_account{{{IG_FIELDS}}}",
                                        "access_token": self.token})
-        self._raw("profile", res)
-        self.user_id = res.get("user_id") or res.get("id")
-        return res
+        accounts = [res.get("instagram_business_account")] if res.get("instagram_business_account") else []
+        if not accounts:
+            pages = _get(f"{self.base}/me/accounts",
+                         {"fields": f"name,instagram_business_account{{{IG_FIELDS}}}", "access_token": self.token})
+            accounts = [pg["instagram_business_account"] for pg in pages.get("data", [])
+                        if pg.get("instagram_business_account")]
+        if not accounts:
+            raise InstagramError("Kein Instagram-Konto mit diesem Token verknüpft (Seite mit Instagram verbinden)")
+        acc = next((a for a in accounts if (a.get("username") or "").lower() == want), accounts[0])
+        self._raw("profile", acc)
+        self.user_id = acc["id"]
+        return {"user_id": acc["id"], "username": acc.get("username"),
+                "followers_count": acc.get("followers_count"), "media_count": acc.get("media_count")}
 
     def _metric(self, metric: str, since: date, until: date, breakdown: str | None = None) -> dict | None:
         params = {"metric": metric, "period": "day", "metric_type": "total_value",

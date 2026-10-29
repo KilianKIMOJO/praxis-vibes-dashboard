@@ -22,15 +22,23 @@ Zeigt Podcast-Wiedergaben und Instagram-Reichweite von Praxis Vibes. Die Daten w
 4. Stimmt die Adresse nicht mit `config/ziele.json` überein, dort `dashboard_url` anpassen.
 
 ### 2. Instagram
-Voraussetzung: @praxis.vibes ist ein öffentliches Business- oder Creator-Konto (Instagram → Einstellungen → Kontotyp und Tools).
-1. Auf developers.facebook.com/apps „App erstellen" wählen. Name z. B. „Praxis Vibes Insights". Als Anwendungsfall **„Nachrichten und Inhalte auf Instagram verwalten"** wählen (Filter „Content-Management"). Nicht „Andere": Dann bietet Meta nur die Variante mit Facebook-Login an, und pro App ist nur eine Variante möglich.
-2. Im App-Dashboard beim Anwendungsfall auf „Anpassen" klicken und **„API-Einrichtung mit Instagram-Login"** wählen.
-3. Unter Berechtigungen nur `instagram_business_basic` und `instagram_business_manage_insights` behalten, den Rest abwählen.
-4. Unter „Instagram → API-Einrichtung mit Instagram Business Login" das Konto @praxis.vibes hinzufügen, mit dessen Zugang einloggen und „Token generieren" klicken. Der Token gilt 60 Tage.
-5. Die App bleibt im Entwicklungsmodus. Für das eigene Konto ist keine App-Prüfung durch Meta nötig.
-6. Den Token im Repo unter Settings → Secrets and variables → Actions → „New repository secret" als `IG_ACCESS_TOKEN` speichern.
-7. Damit der Token nie abläuft: unter github.com/settings/personal-access-tokens/new einen fein granulierten Token anlegen. Repository access „Only select repositories" mit diesem Repo, Berechtigung Repository → „Secrets: Read and write", Ablauf 1 Jahr. Als Secret `GH_SECRETS_TOKEN` speichern. Der Wochenlauf verlängert und speichert den Instagram-Token dann selbst.
-8. Actions → Wochenabruf → „Run workflow" mit `backfill` = `12`. Das holt die letzten zwölf Wochen nach, mehr hält Instagram nicht vor.
+Der Abruf erkennt am Token selbst, welche der beiden Meta-Varianten genutzt wird. Seit Oktober 2026 bietet Meta neuen Apps oft nur noch die Variante mit Facebook-Login an, deshalb ist sie hier der Standard.
+
+**Variante Facebook-Login (Standard, Token läuft nie ab)**
+1. @praxis.vibes muss ein Business- oder Creator-Konto sein und mit einer Facebook-Seite verknüpft sein, auf der du Admin bist.
+2. Auf developers.facebook.com/apps eine App mit dem Anwendungsfall „Messaging und Content auf Instagram verwalten" anlegen. Unter „Anwendungsfälle → Anpassen → Berechtigungen und Features" diese Berechtigungen hinzufügen: `instagram_basic`, `instagram_manage_insights`, `pages_show_list`, `pages_read_engagement`. Liegt die Seite in einem Business-Portfolio, zusätzlich `business_management`.
+3. Im Graph API Explorer (developers.facebook.com/tools/explorer) die App wählen, „Nutzer-Token" einstellen, die Berechtigungen aus Schritt 2 anhaken und „Generate Access Token" klicken. Im Dialog die Seite und @praxis.vibes freigeben.
+4. Im Access Token Debugger (developers.facebook.com/tools/debug/accesstoken) den Token einfügen, „Debuggen" und dann „Zugriffsschlüssel verlängern" klicken. Den langlebigen Token kopieren.
+5. Zurück im Explorer den langlebigen Token einsetzen und `me/accounts?fields=name,access_token` abfragen. Den `access_token` der Praxis-Vibes-Seite kopieren. Im Debugger prüfen, dass dort „Läuft ab: Nie" steht.
+6. Diesen Seiten-Token als Secret `IG_ACCESS_TOKEN` speichern (Settings → Secrets and variables → Actions → „New repository secret"). `GH_SECRETS_TOKEN` ist bei dieser Variante nicht nötig.
+
+**Variante Instagram-Login (falls Meta sie anbietet, Token gilt 60 Tage)**
+1. App mit dem Anwendungsfall „Messaging und Content auf Instagram verwalten" anlegen, beim Anpassen „API-Einrichtung mit Instagram-Login" wählen.
+2. Nur `instagram_business_basic` und `instagram_business_manage_insights` behalten, das Konto hinzufügen und „Token generieren".
+3. Token als Secret `IG_ACCESS_TOKEN` speichern.
+4. Zusätzlich einen fein granulierten GitHub-Token mit „Secrets: Read and write" nur für dieses Repo als `GH_SECRETS_TOKEN` speichern. Dann verlängert der Wochenlauf den Instagram-Token selbst.
+
+**Danach:** Actions → Wochenabruf → „Run workflow" mit `backfill` = `12`. Das holt die letzten zwölf Wochen nach, mehr hält Instagram nicht vor. Die App bleibt in beiden Varianten im Entwicklungsmodus, für das eigene Konto ist keine App-Prüfung nötig.
 
 ### 3. Spotify for Creators
 Spotify hat keine offizielle Statistik-Schnittstelle. Der Abruf nutzt die Sitzungs-Cookies eines eingeloggten Kontos.
