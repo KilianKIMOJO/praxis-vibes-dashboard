@@ -23,8 +23,8 @@ Zeigt Podcast-Wiedergaben und Instagram-Reichweite von Praxis Vibes. Die Daten w
 
 ### 2. Instagram
 Voraussetzung: @praxis.vibes ist ein öffentliches Business- oder Creator-Konto (Instagram → Einstellungen → Kontotyp und Tools).
-1. Auf developers.facebook.com/apps „App erstellen" wählen. Anwendungsfall „Andere", App-Typ „Business", Name z. B. „Praxis Vibes Dashboard".
-2. Beim Produkt „Instagram" auf „Einrichten" klicken. „API-Einrichtung mit Instagram-Login" wird automatisch hinzugefügt.
+1. Auf developers.facebook.com/apps „App erstellen" wählen. Name z. B. „Praxis Vibes Insights". Als Anwendungsfall **„Nachrichten und Inhalte auf Instagram verwalten"** wählen (Filter „Content-Management"). Nicht „Andere": Dann bietet Meta nur die Variante mit Facebook-Login an, und pro App ist nur eine Variante möglich.
+2. Im App-Dashboard beim Anwendungsfall auf „Anpassen" klicken und **„API-Einrichtung mit Instagram-Login"** wählen.
 3. Unter Berechtigungen nur `instagram_business_basic` und `instagram_business_manage_insights` behalten, den Rest abwählen.
 4. Unter „Instagram → API-Einrichtung mit Instagram Business Login" das Konto @praxis.vibes hinzufügen, mit dessen Zugang einloggen und „Token generieren" klicken. Der Token gilt 60 Tage.
 5. Die App bleibt im Entwicklungsmodus. Für das eigene Konto ist keine App-Prüfung durch Meta nötig.
