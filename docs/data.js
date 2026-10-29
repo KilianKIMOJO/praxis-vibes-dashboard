@@ -1,6 +1,6 @@
 // automatisch erzeugt von pipeline/build.py – nicht von Hand ändern
 window.PV_DATA = {
- "generated": "2026-10-29T09:35:00+00:00",
+ "generated": "2026-10-29T09:40:32+00:00",
  "period": {
   "weeks": [
    "2026-W42",
@@ -1952,19 +1952,19 @@ window.PV_DATA = {
  "status": {
   "feed": {
    "ok": true,
-   "checked": "2026-10-29T09:29:49+00:00",
+   "checked": "2026-10-29T09:40:32+00:00",
    "message": "86 Folgen im Feed"
   },
   "instagram": {
    "ok": false,
-   "checked": "2026-10-29T09:29:50+00:00",
+   "checked": "2026-10-29T09:40:32+00:00",
    "message": "Kein Zugang hinterlegt (IG_ACCESS_TOKEN). Werte kommen aus dem Excel."
   },
   "spotify": {
    "ok": false,
-   "checked": "2026-10-29T09:29:50+00:00",
+   "checked": "2026-10-29T09:40:32+00:00",
    "message": "Kein Zugang hinterlegt (SPOTIFY_SP_DC/SP_KEY). Werte kommen aus dem Excel."
   },
-  "last_run": "2026-10-29T09:29:50+00:00"
+  "last_run": "2026-10-29T09:40:32+00:00"
  }
 };
