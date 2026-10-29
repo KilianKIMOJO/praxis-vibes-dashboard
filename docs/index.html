@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Praxis Vibes Reichweite</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">PV</div>
+    <div>
+      <h1>Praxis Vibes <span>Reichweite</span></h1>
+      <div class="sub" id="stand">–</div>
+    </div>
+  </div>
+  <div class="sources" id="sources" aria-label="Datenquellen"></div>
+</header>
+
+<main>
+  <section aria-labelledby="h-north">
+    <div class="sec-head">
+      <h2 id="h-north">Nordsterne · <span id="period-label">–</span></h2>
+      <span class="sec-note" id="period-dates"></span>
+    </div>
+    <div class="north" id="north"></div>
+  </section>
+
+  <section aria-labelledby="h-trend">
+    <div class="sec-head">
+      <h2 id="h-trend">Verlauf je Woche</h2>
+      <div class="seg" role="group" aria-label="Zeitraum" id="range">
+        <button data-r="13">3 Monate</button>
+        <button data-r="26" class="on">6 Monate</button>
+        <button data-r="52">12 Monate</button>
+        <button data-r="999">Alles</button>
+      </div>
+    </div>
+    <div class="grid2">
+      <figure class="card chart" id="c-plays"><figcaption>Podcast-Wiedergaben <small>Rauten = neue Folge</small></figcaption><div class="plot"></div></figure>
+      <figure class="card chart" id="c-reach"><figcaption>Instagram erreichte Konten</figcaption><div class="plot"></div></figure>
+      <figure class="card chart" id="c-igf"><figcaption>Instagram-Follower gesamt</figcaption><div class="plot"></div></figure>
+      <figure class="card chart" id="c-igz"><figcaption>Instagram-Follower netto je Woche</figcaption><div class="plot"></div></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-bridge">
+    <div class="sec-head"><h2 id="h-bridge">Treiber und Brücke Instagram → Podcast · 14 Tage</h2></div>
+    <div class="tiles" id="drivers"></div>
+  </section>
+
+  <section class="grid2 wide-left">
+    <div class="card" aria-labelledby="h-hints">
+      <h2 id="h-hints" class="card-h">Was auffällt</h2>
+      <ul class="hints" id="hints"></ul>
+    </div>
+    <div class="card" aria-labelledby="h-eps">
+      <h2 id="h-eps" class="card-h">Letzte Folgen</h2>
+      <table class="eps" id="eps"><thead><tr><th>#</th><th>Folge</th><th>Datum</th><th class="r">Wiedergaben</th></tr></thead><tbody></tbody></table>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-table">
+    <details class="card">
+      <summary><h2 id="h-table" class="card-h inline">Alle Wochenwerte als Tabelle</h2></summary>
+      <div class="tbl-wrap"><table class="weeks" id="weeks"></table></div>
+    </details>
+  </section>
+</main>
+<footer>Automatisch erzeugt jeden Montag · Quellen: Instagram Graph API, Spotify for Creators, RSS-Feed, Historie aus KPI-Tracking.xlsx</footer>
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

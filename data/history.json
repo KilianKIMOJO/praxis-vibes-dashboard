@@ -1,0 +1,1043 @@
+[
+  {
+    "week": "2025-W31",
+    "start": "2025-07-28",
+    "end": "2025-08-03",
+    "ig": {
+      "followers": 253,
+      "follows": 4,
+      "unfollows": 1,
+      "net": 3
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2025-W32",
+    "start": "2025-08-04",
+    "end": "2025-08-10",
+    "ig": {
+      "followers": 256,
+      "follows": 4,
+      "unfollows": 1,
+      "net": 3
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2025-W37",
+    "start": "2025-09-08",
+    "end": "2025-09-14",
+    "ig": {},
+    "pod": {},
+    "sources": {}
+  },
+  {
+    "week": "2025-W38",
+    "start": "2025-09-15",
+    "end": "2025-09-21",
+    "ig": {
+      "followers": 274,
+      "follows": 3,
+      "unfollows": 0,
+      "net": 3
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2025-W40",
+    "start": "2025-09-29",
+    "end": "2025-10-05",
+    "ig": {
+      "followers": 300,
+      "follows": 29,
+      "unfollows": 3,
+      "net": 26
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2025-W42",
+    "start": "2025-10-13",
+    "end": "2025-10-19",
+    "ig": {
+      "followers": 310,
+      "follows": 11,
+      "unfollows": 1,
+      "net": 10
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2025-W43",
+    "start": "2025-10-20",
+    "end": "2025-10-26",
+    "ig": {
+      "followers": 317,
+      "follows": 8,
+      "unfollows": 1,
+      "net": 7
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2025-W44",
+    "start": "2025-10-27",
+    "end": "2025-11-02",
+    "ig": {
+      "followers": 323,
+      "follows": 7,
+      "unfollows": 1,
+      "net": 6
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2025-W45",
+    "start": "2025-11-03",
+    "end": "2025-11-09",
+    "ig": {
+      "followers": 369,
+      "follows": 49,
+      "unfollows": 3,
+      "net": 46
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2025-W46",
+    "start": "2025-11-10",
+    "end": "2025-11-16",
+    "ig": {
+      "followers": 411,
+      "follows": 44,
+      "unfollows": 2,
+      "net": 42
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2025-W47",
+    "start": "2025-11-17",
+    "end": "2025-11-23",
+    "ig": {
+      "followers": 448,
+      "follows": 41,
+      "unfollows": 4,
+      "net": 37
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2025-W48",
+    "start": "2025-11-24",
+    "end": "2025-11-30",
+    "ig": {
+      "followers": 497,
+      "follows": 50,
+      "unfollows": 1,
+      "net": 49
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2025-W49",
+    "start": "2025-12-01",
+    "end": "2025-12-07",
+    "ig": {
+      "followers": 543,
+      "profile_views": 221,
+      "follows": 46,
+      "unfollows": 0,
+      "link_clicks": 7,
+      "net": 46
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2025-W50",
+    "start": "2025-12-08",
+    "end": "2025-12-14",
+    "ig": {
+      "followers": 578,
+      "profile_views": 452,
+      "follows": 51,
+      "unfollows": 6,
+      "link_clicks": 6,
+      "net": 35
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2025-W51",
+    "start": "2025-12-15",
+    "end": "2025-12-21",
+    "ig": {
+      "followers": 614,
+      "profile_views": 447,
+      "follows": 37,
+      "unfollows": 1,
+      "link_clicks": 4,
+      "net": 36
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W01",
+    "start": "2025-12-29",
+    "end": "2026-01-04",
+    "ig": {
+      "followers": 737,
+      "profile_views": 511,
+      "follows": 110,
+      "unfollows": 5,
+      "link_clicks": 3,
+      "net": 105
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W02",
+    "start": "2026-01-05",
+    "end": "2026-01-11",
+    "ig": {
+      "followers": 928,
+      "profile_views": 1244,
+      "follows": 193,
+      "unfollows": 2,
+      "link_clicks": 25,
+      "net": 191
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W03",
+    "start": "2026-01-12",
+    "end": "2026-01-18",
+    "ig": {
+      "followers": 1008,
+      "profile_views": 687,
+      "follows": 88,
+      "unfollows": 8,
+      "link_clicks": 10,
+      "net": 80
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W04",
+    "start": "2026-01-19",
+    "end": "2026-01-25",
+    "ig": {
+      "followers": 1079,
+      "profile_views": 467,
+      "follows": 76,
+      "unfollows": 5,
+      "link_clicks": 8,
+      "net": 71
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W05",
+    "start": "2026-01-26",
+    "end": "2026-02-01",
+    "ig": {
+      "followers": 1116,
+      "profile_views": 294,
+      "follows": 42,
+      "unfollows": 5,
+      "link_clicks": 7,
+      "net": 37
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W06",
+    "start": "2026-02-02",
+    "end": "2026-02-08",
+    "ig": {
+      "followers": 1210,
+      "profile_views": 539,
+      "follows": 99,
+      "unfollows": 5,
+      "link_clicks": 6,
+      "net": 94
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W07",
+    "start": "2026-02-09",
+    "end": "2026-02-15",
+    "ig": {
+      "followers": 1296,
+      "profile_views": 570,
+      "follows": 99,
+      "unfollows": 13,
+      "link_clicks": 4,
+      "net": 86
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W08",
+    "start": "2026-02-16",
+    "end": "2026-02-22",
+    "ig": {
+      "followers": 1385,
+      "profile_views": 533,
+      "follows": 95,
+      "unfollows": 6,
+      "link_clicks": 8,
+      "net": 89
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W09",
+    "start": "2026-02-23",
+    "end": "2026-03-01",
+    "ig": {
+      "followers": 1472,
+      "profile_views": 508,
+      "follows": 95,
+      "unfollows": 8,
+      "link_clicks": 5,
+      "net": 87
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W10",
+    "start": "2026-03-02",
+    "end": "2026-03-08",
+    "ig": {
+      "followers": 1572,
+      "profile_views": 509,
+      "follows": 109,
+      "unfollows": 9,
+      "link_clicks": 6,
+      "net": 100
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W11",
+    "start": "2026-03-09",
+    "end": "2026-03-15",
+    "ig": {
+      "followers": 1645,
+      "profile_views": 386,
+      "follows": 83,
+      "unfollows": 10,
+      "link_clicks": 6,
+      "net": 73
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W12",
+    "start": "2026-03-16",
+    "end": "2026-03-22",
+    "ig": {
+      "followers": 1679,
+      "profile_views": 292,
+      "follows": 37,
+      "unfollows": 3,
+      "link_clicks": 0,
+      "net": 34
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W13",
+    "start": "2026-03-23",
+    "end": "2026-03-29",
+    "ig": {
+      "followers": 1819,
+      "profile_views": 930,
+      "follows": 151,
+      "unfollows": 11,
+      "link_clicks": 5,
+      "net": 140
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W14",
+    "start": "2026-03-30",
+    "end": "2026-04-05",
+    "ig": {
+      "followers": 1947,
+      "profile_views": 591,
+      "follows": 137,
+      "unfollows": 9,
+      "link_clicks": 13,
+      "net": 128
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W15",
+    "start": "2026-04-06",
+    "end": "2026-04-12",
+    "ig": {
+      "followers": 2030,
+      "profile_views": 495,
+      "follows": 91,
+      "unfollows": 8,
+      "link_clicks": 2,
+      "net": 83
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W16",
+    "start": "2026-04-13",
+    "end": "2026-04-19",
+    "ig": {
+      "followers": 2152,
+      "profile_views": 744,
+      "follows": 131,
+      "unfollows": 9,
+      "link_clicks": 3,
+      "net": 122,
+      "link_bio": 3,
+      "link_story": 3
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W17",
+    "start": "2026-04-20",
+    "end": "2026-04-26",
+    "ig": {
+      "followers": 2274,
+      "views": 29500,
+      "follows": 134,
+      "profile_views": 496,
+      "unfollows": 12,
+      "link_clicks": 2,
+      "net": 122,
+      "reach": 5298
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W18",
+    "start": "2026-04-27",
+    "end": "2026-05-03",
+    "ig": {
+      "followers": 2334,
+      "views": 46898,
+      "follows": 68,
+      "profile_views": 299,
+      "unfollows": 8,
+      "link_clicks": 6,
+      "net": 60,
+      "reach": 5212
+    },
+    "pod": {},
+    "sources": {
+      "ig": "excel"
+    }
+  },
+  {
+    "week": "2026-W19",
+    "start": "2026-05-04",
+    "end": "2026-05-10",
+    "ig": {
+      "followers": 2422,
+      "views": 23120,
+      "follows": 96,
+      "profile_views": 589,
+      "unfollows": 8,
+      "link_clicks": 11,
+      "net": 88,
+      "reach": 7320,
+      "link_story": 7,
+      "link_bio": 5
+    },
+    "pod": {
+      "plays": 545,
+      "followers_net": 10
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W20",
+    "start": "2026-05-11",
+    "end": "2026-05-17",
+    "ig": {
+      "followers": 2481,
+      "views": 19779,
+      "follows": 74,
+      "profile_views": 403,
+      "unfollows": 15,
+      "link_clicks": 2,
+      "net": 59,
+      "reach": 8009,
+      "link_story": 6,
+      "link_bio": 2
+    },
+    "pod": {
+      "plays": 419,
+      "followers_net": 3
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W21",
+    "start": "2026-05-18",
+    "end": "2026-05-24",
+    "ig": {
+      "followers": 2520,
+      "views": 13270,
+      "follows": 52,
+      "profile_views": 288,
+      "unfollows": 13,
+      "link_clicks": 1,
+      "net": 39,
+      "reach": 6564,
+      "link_story": 2,
+      "link_bio": 1
+    },
+    "pod": {
+      "plays": 350,
+      "followers_net": 3
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W22",
+    "start": "2026-05-25",
+    "end": "2026-05-31",
+    "ig": {
+      "followers": 2577,
+      "views": 13193,
+      "follows": 67,
+      "profile_views": 360,
+      "unfollows": 10,
+      "link_clicks": 11,
+      "net": 57,
+      "reach": 3240,
+      "link_story": 11,
+      "link_bio": 5
+    },
+    "pod": {
+      "plays": 414,
+      "followers_net": 9
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W23",
+    "start": "2026-06-01",
+    "end": "2026-06-07",
+    "ig": {
+      "followers": 2636,
+      "views": 21017,
+      "follows": 62,
+      "profile_views": 223,
+      "unfollows": 3,
+      "link_clicks": 4,
+      "net": 59,
+      "reach": 6763,
+      "link_story": 8,
+      "link_bio": 3
+    },
+    "pod": {
+      "plays": 442,
+      "followers_net": 8
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W24",
+    "start": "2026-06-08",
+    "end": "2026-06-14",
+    "ig": {
+      "followers": 2730,
+      "views": 21281,
+      "follows": 101,
+      "profile_views": 555,
+      "unfollows": 7,
+      "link_clicks": 6,
+      "net": 94,
+      "reach": 6095,
+      "link_story": 4,
+      "link_bio": 3
+    },
+    "pod": {
+      "plays": 574,
+      "followers_net": 4
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W25",
+    "start": "2026-06-15",
+    "end": "2026-06-21",
+    "ig": {
+      "followers": 2780,
+      "views": 24519,
+      "follows": 50,
+      "profile_views": 352,
+      "unfollows": 0,
+      "link_clicks": 3,
+      "net": 50,
+      "reach": 7470,
+      "link_story": 2,
+      "link_bio": 3
+    },
+    "pod": {
+      "plays": 464,
+      "followers_net": 4
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W26",
+    "start": "2026-06-22",
+    "end": "2026-06-28",
+    "ig": {
+      "followers": 2830,
+      "views": 10975,
+      "follows": 59,
+      "profile_views": 263,
+      "unfollows": 9,
+      "link_clicks": 0,
+      "net": 50,
+      "reach": 4180,
+      "link_story": 1,
+      "link_bio": 1
+    },
+    "pod": {
+      "plays": 412,
+      "followers_net": 1
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W27",
+    "start": "2026-06-29",
+    "end": "2026-07-05",
+    "ig": {
+      "followers": 2894,
+      "views": 13807,
+      "follows": 84,
+      "profile_views": 416,
+      "unfollows": 20,
+      "link_clicks": 2,
+      "net": 64,
+      "reach": 4478,
+      "link_story": 3,
+      "link_bio": 0
+    },
+    "pod": {
+      "plays": 356,
+      "followers_net": 2
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W28",
+    "start": "2026-07-06",
+    "end": "2026-07-12",
+    "ig": {
+      "followers": 2989,
+      "views": 17899,
+      "follows": 102,
+      "profile_views": 511,
+      "unfollows": 7,
+      "link_clicks": 2,
+      "net": 95,
+      "reach": 4775,
+      "link_story": 3,
+      "link_bio": 2
+    },
+    "pod": {
+      "plays": 371,
+      "followers_net": 0
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W29",
+    "start": "2026-07-13",
+    "end": "2026-07-19",
+    "ig": {
+      "followers": 3019,
+      "views": 12326,
+      "follows": 36,
+      "profile_views": 375,
+      "unfollows": 6,
+      "link_clicks": 3,
+      "net": 30,
+      "reach": 3840,
+      "link_story": 3,
+      "link_bio": 2
+    },
+    "pod": {
+      "plays": 215,
+      "followers_net": 2
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W30",
+    "start": "2026-07-20",
+    "end": "2026-07-26",
+    "ig": {
+      "followers": 3031,
+      "views": 16817,
+      "follows": 22,
+      "profile_views": 151,
+      "unfollows": 10,
+      "link_clicks": 3,
+      "net": 12,
+      "reach": 5159
+    },
+    "pod": {
+      "plays": 358,
+      "followers_net": 4
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W31",
+    "start": "2026-07-27",
+    "end": "2026-08-02",
+    "ig": {
+      "followers": 3044,
+      "views": 17516,
+      "follows": 25,
+      "profile_views": 119,
+      "unfollows": 12,
+      "link_clicks": 1,
+      "net": 13,
+      "reach": 6354
+    },
+    "pod": {
+      "plays": 262,
+      "followers_net": 1
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W32",
+    "start": "2026-08-03",
+    "end": "2026-08-09",
+    "ig": {
+      "followers": 3056,
+      "views": 14579,
+      "follows": 19,
+      "profile_views": 114,
+      "unfollows": 7,
+      "link_clicks": 1,
+      "net": 12,
+      "reach": 4698
+    },
+    "pod": {
+      "plays": 353,
+      "followers_net": 0
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W33",
+    "start": "2026-08-10",
+    "end": "2026-08-16",
+    "ig": {
+      "followers": 3052,
+      "views": 9772,
+      "follows": 7,
+      "profile_views": 92,
+      "unfollows": 11,
+      "link_clicks": 0,
+      "net": -4,
+      "reach": 2968
+    },
+    "pod": {
+      "plays": 169,
+      "followers_net": 5
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W36",
+    "start": "2026-08-31",
+    "end": "2026-09-06",
+    "ig": {
+      "followers": 3059,
+      "views": 17449,
+      "follows": 20,
+      "profile_views": 139,
+      "unfollows": 9,
+      "link_clicks": 4,
+      "net": 7,
+      "reach": 5804
+    },
+    "pod": {
+      "plays": 347,
+      "followers_net": 2
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W37",
+    "start": "2026-09-07",
+    "end": "2026-09-13",
+    "ig": {
+      "followers": 3050,
+      "views": 13380,
+      "follows": 6,
+      "profile_views": 104,
+      "unfollows": 15,
+      "link_clicks": 2,
+      "net": -9,
+      "reach": 4570
+    },
+    "pod": {
+      "plays": 236,
+      "followers_net": 0
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W38",
+    "start": "2026-09-14",
+    "end": "2026-09-20",
+    "ig": {
+      "followers": 3092,
+      "views": 14966,
+      "follows": 53,
+      "profile_views": 158,
+      "unfollows": 11,
+      "link_clicks": 2,
+      "net": 42,
+      "reach": 5299
+    },
+    "pod": {
+      "plays": 396,
+      "followers_net": 0
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W39",
+    "start": "2026-09-21",
+    "end": "2026-09-27",
+    "ig": {
+      "followers": 3121,
+      "views": 29582,
+      "follows": 39,
+      "profile_views": 137,
+      "unfollows": 10,
+      "link_clicks": 4,
+      "net": 29,
+      "reach": 12027
+    },
+    "pod": {
+      "plays": 396,
+      "followers_net": 3
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W42",
+    "start": "2026-10-12",
+    "end": "2026-10-18",
+    "ig": {
+      "followers": 3164,
+      "views": 15171,
+      "follows": 49,
+      "profile_views": 113,
+      "unfollows": 6,
+      "link_clicks": 2,
+      "net": 43,
+      "reach": 5358
+    },
+    "pod": {
+      "plays": 296,
+      "followers_net": 1
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  },
+  {
+    "week": "2026-W43",
+    "start": "2026-10-19",
+    "end": "2026-10-25",
+    "ig": {
+      "followers": 3171,
+      "views": 15171,
+      "follows": 15,
+      "profile_views": 85,
+      "unfollows": 8,
+      "link_clicks": 1,
+      "net": 7,
+      "reach": 5336
+    },
+    "pod": {
+      "plays": 195,
+      "followers_net": 1
+    },
+    "sources": {
+      "ig": "excel",
+      "pod": "excel"
+    }
+  }
+]

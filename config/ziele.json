@@ -1,0 +1,8 @@
+{
+  "_hinweis": "Zielwerte aus dem Workshop mit Laura und Steffen eintragen. null = noch kein Ziel. Werte je 14 Tage, Follower als Stand zum Datum.",
+  "pod_plays_14d": null,
+  "ig_reach_14d": null,
+  "ig_followers": { "wert": null, "bis": "2026-12-31" },
+  "pod_followers": { "wert": null, "bis": "2026-12-31" },
+  "dashboard_url": "https://kiliankimojo.github.io/praxis-vibes-dashboard/"
+}

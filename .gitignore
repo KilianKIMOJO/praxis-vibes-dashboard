@@ -1,0 +1,7 @@
+data/raw/
+__pycache__/
+.DS_Store
+.env
+
+# internes Konzept bleibt nur im OneDrive
+KONZEPT.md

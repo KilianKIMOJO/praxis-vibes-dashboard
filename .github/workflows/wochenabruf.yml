@@ -1,0 +1,75 @@
+name: Wochenabruf
+
+on:
+  schedule:
+    - cron: "0 5 * * 1"   # jeden Montag 05:00 UTC (06:00 Winterzeit / 07:00 Sommerzeit)
+  workflow_dispatch:
+    inputs:
+      backfill:
+        description: "Instagram zusätzlich für so viele Vorwochen abrufen (0–12)"
+        default: "0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wochenabruf
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Spotify-Bibliothek installieren
+        run: pip install "spotifygraphqlconnector==0.5.3"
+
+      - name: Daten abrufen und Dashboard erzeugen
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          SPOTIFY_SP_DC: ${{ secrets.SPOTIFY_SP_DC }}
+          SPOTIFY_SP_KEY: ${{ secrets.SPOTIFY_SP_KEY }}
+          SPOTIFY_SHOW_URI: ${{ secrets.SPOTIFY_SHOW_URI }}
+          BACKFILL: ${{ github.event.inputs.backfill || '0' }}
+        run: python pipeline/run_weekly.py
+
+      # Verlängerter Instagram-Token wird ins Secret zurückgeschrieben.
+      # Braucht das Secret GH_SECRETS_TOKEN (fein granulierter Token mit "Secrets: Read and write" auf dieses Repo).
+      - name: Instagram-Token im Secret erneuern
+        env:
+          GH_TOKEN: ${{ secrets.GH_SECRETS_TOKEN }}
+        run: |
+          if [ -f "$RUNNER_TEMP/ig_token_new" ] && [ -n "$GH_TOKEN" ]; then
+            gh secret set IG_ACCESS_TOKEN --repo "$GITHUB_REPOSITORY" < "$RUNNER_TEMP/ig_token_new"
+            echo "Instagram-Token erneuert."
+          else
+            echo "Kein neuer Token oder kein GH_SECRETS_TOKEN – übersprungen."
+          fi
+          rm -f "$RUNNER_TEMP/ig_token_new"
+
+      # Rohantworten nur als Workflow-Anhang (30 Tage), nie ins Repo
+      - name: Rohdaten anhängen
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rohdaten
+          path: data/raw/
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: Änderungen speichern
+        run: |
+          git config user.name "praxis-vibes-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/history.json data/episodes.json data/status.json docs/data.js docs/mail.json docs/mail.html
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen."
+          else
+            git commit -m "Daten bis $(date -u -d 'last sunday' +%G-W%V)"
+            git push
+          fi
