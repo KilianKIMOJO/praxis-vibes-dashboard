@@ -22,12 +22,15 @@ Zeigt Podcast-Wiedergaben und Instagram-Reichweite von Praxis Vibes. Die Daten w
 4. Stimmt die Adresse nicht mit `config/ziele.json` überein, dort `dashboard_url` anpassen.
 
 ### 2. Instagram
-Voraussetzung: @praxis.vibes ist ein Business- oder Creator-Konto.
-1. Auf developers.facebook.com eine App vom Typ „Business" anlegen.
-2. Produkt „Instagram" hinzufügen und „API-Einrichtung mit Instagram-Login" wählen.
-3. Das Konto @praxis.vibes verbinden und einen Token erzeugen. Nötige Berechtigungen: `instagram_business_basic` und `instagram_business_manage_insights`.
-4. Den Token im Repo unter Settings → Secrets → Actions als `IG_ACCESS_TOKEN` speichern.
-5. Damit der Token nach 60 Tagen nicht abläuft: einen fein granulierten GitHub-Token mit „Secrets: Read and write" nur für dieses Repo erzeugen und als `GH_SECRETS_TOKEN` speichern. Der Wochenlauf verlängert und speichert den Instagram-Token dann selbst.
+Voraussetzung: @praxis.vibes ist ein öffentliches Business- oder Creator-Konto (Instagram → Einstellungen → Kontotyp und Tools).
+1. Auf developers.facebook.com/apps „App erstellen" wählen. Anwendungsfall „Andere", App-Typ „Business", Name z. B. „Praxis Vibes Dashboard".
+2. Beim Produkt „Instagram" auf „Einrichten" klicken. „API-Einrichtung mit Instagram-Login" wird automatisch hinzugefügt.
+3. Unter Berechtigungen nur `instagram_business_basic` und `instagram_business_manage_insights` behalten, den Rest abwählen.
+4. Unter „Instagram → API-Einrichtung mit Instagram Business Login" das Konto @praxis.vibes hinzufügen, mit dessen Zugang einloggen und „Token generieren" klicken. Der Token gilt 60 Tage.
+5. Die App bleibt im Entwicklungsmodus. Für das eigene Konto ist keine App-Prüfung durch Meta nötig.
+6. Den Token im Repo unter Settings → Secrets and variables → Actions → „New repository secret" als `IG_ACCESS_TOKEN` speichern.
+7. Damit der Token nie abläuft: unter github.com/settings/personal-access-tokens/new einen fein granulierten Token anlegen. Repository access „Only select repositories" mit diesem Repo, Berechtigung Repository → „Secrets: Read and write", Ablauf 1 Jahr. Als Secret `GH_SECRETS_TOKEN` speichern. Der Wochenlauf verlängert und speichert den Instagram-Token dann selbst.
+8. Actions → Wochenabruf → „Run workflow" mit `backfill` = `12`. Das holt die letzten zwölf Wochen nach, mehr hält Instagram nicht vor.
 
 ### 3. Spotify for Creators
 Spotify hat keine offizielle Statistik-Schnittstelle. Der Abruf nutzt die Sitzungs-Cookies eines eingeloggten Kontos.

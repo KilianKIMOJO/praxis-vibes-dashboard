@@ -1,7 +1,7 @@
 """Instagram-Kennzahlen über die offizielle Instagram Graph API (Instagram Login).
 
 Benötigt:  IG_ACCESS_TOKEN  (langlebiger Token, 60 Tage gültig)
-Optional:  IG_API_VERSION   (Standard v23.0)
+Optional:  IG_API_VERSION   (Standard v26.0)
 
 Je Woche (Mo 00:00 bis Mo 00:00, Europe/Berlin) werden abgefragt:
 reach, views, profile_views, profile_links_taps, follows_and_unfollows.
@@ -48,7 +48,7 @@ def _ts(d: date) -> int:
 class Instagram:
     def __init__(self, token: str, version: str | None = None, raw_dir: Path | None = None):
         self.token = token
-        self.base = f"{HOST}/{version or os.environ.get('IG_API_VERSION') or 'v23.0'}"
+        self.base = f"{HOST}/{version or os.environ.get('IG_API_VERSION') or 'v26.0'}"
         self.raw_dir = raw_dir
         self.user_id = None
         self.warnings: list[str] = []
